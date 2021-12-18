@@ -1,0 +1,984 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'quicksand', sans-serif;;
+}
+
+html, body{
+    overflow-x: hidden;
+    width: 100vw ;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+li{
+    list-style: none;
+}
+.BgImg{
+    position: relative;
+    /* height: 100vh;
+    width: 100vw;
+    object-fit: cover; */
+    /* background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+.Page1{
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1972&q=80');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.ImgOverlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+.Navbar{
+    z-index: 6;
+    position: fixed;
+    height: 8vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Rightside{
+    display: flex;
+    margin-right: 5%;
+    width: 50%;
+    justify-content: space-evenly;
+}
+.Leftside{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.Navlink{
+    cursor: none;
+    transition: 0.3s ease;
+}
+.Navlink li{
+    cursor: pointer;
+    font-weight: bold;
+}
+.Navlink, .NavLogo{
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+.NavLogo{
+    margin-left: 8%;
+    font-size: 1.7rem;
+    margin-right: 0.4em;
+    transition: 0.3s ease;
+}
+.PlaneLogo{
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer;
+}
+.Navlink:hover, .NavLogo:hover, .PlaneLogo:hover{
+    color: #facc00;
+    transition: 0.3s ease;
+}
+.Page1Title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 4rem;
+    z-index: 5;
+}
+
+.Page1Btn{
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    z-index: 3;
+    font-size: 1.8rem;
+    padding: 0.5em 1.5em;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.Page1Btn:hover{
+    color: black;
+    border: 1px solid black;
+}
+.Page1Btn:before{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right:50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    transition: 0.5s ease;
+    background-color: #facc00;
+}
+.Page1Btn:hover:before{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 1;
+    z-index: -1;
+}
+.InfoSection{
+    height: 40vh;
+    width: 55vw;
+    display: flex;
+    margin: auto;
+    column-gap: 1em;
+}
+.InfoContainer{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1em;
+    font-family: 'quicksand', sans-serif;
+}
+i{
+    color: rgb(0, 102, 255);
+    font-size: 3rem;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.InfoTitle{
+    font-weight: normal;
+}
+.InfoDescription{
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.4em;
+    position: relative;
+}
+.Img1Container{
+    display: flex;
+    height: 60vh;
+    width: 100vw;
+    position: relative;
+    letter-spacing: 0.03em;
+}
+.BigImg{
+    width: 50%;
+    object-fit: cover;
+}
+.ImgsContainer{
+    width: 100vw;
+}
+.ImgDescriptionTitle{
+    /* position: absolute;
+    top: 30%;
+    left: 5%; */
+    margin-top: 4em;
+    margin-left: 1.2em;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 1.5em;
+}
+.ImgDescriptionSubtitle{
+    margin-top: 1em;
+    margin-left: 2.5em;
+    width: 70%;
+    font-weight: 300;
+    line-height: 1.8em;
+}
+.Img1Description{
+    height: 100%;
+    width: 50%;
+    background-color: rgb(245, 245, 245);
+    position: relative;
+}
+.Img2Container{
+    display: flex;
+    height: 60vh;
+    width: 100vw;
+    position: relative;
+    letter-spacing: 0.03em;
+}
+
+.Img2Description{
+    height: 100%;
+    width: 50%;
+    background-color: rgb(245, 245, 245);
+    position: relative;
+}
+.DestinationsPage{
+    height: 65vh;
+    width: 100vw;
+}
+.DestinationsTitle{
+    font-weight: normal;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+.DestinationsSubtitle{
+    font-weight: 300;
+    margin-bottom: 3em;
+}
+.DestinationsTitle, .DestinationsSubtitle{
+    text-align: center;
+}
+.DestinationsContainer{
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+}
+.DestinationImgContainer{
+    height: 200px;
+    width: 250px;
+    background-color: lightblue;
+    position: relative;
+    cursor: pointer;
+}
+.Destination{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: 1;
+}
+.DestinationOverlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #4484cf;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transition: .4s ease;
+    opacity: 0;
+    z-index: 4;
+}
+.DestinationOverlay:hover{
+    opacity: 1;
+}
+
+.DestinationOverlayMainText, .DestinationOverlaySubtext{
+    color: white;
+    text-align: center;
+    margin-top: 2em;
+}
+.DestinationOverlayMainText{
+    font-size: 1.5rem;
+}
+.DestinationOverlaySubtext{
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.SmallImgContainer{
+    height: 25vh;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+.SmallImgOverlay{
+    background-color: rgba(0, 0, 0, 0.40);
+    z-index: 1;
+}
+.SmallImgMainText, .SmallImgSubtext{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    letter-spacing: 0.03em;
+    color: white;
+    text-align: center;
+    z-index: 4;
+}
+.SmallImgMainText{
+    /* top: 40%; */
+    margin-top: 2.5em;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.SmallImgSubtext{
+    /* top: 60%;
+    width: 25%; */
+    width: 100%;
+}
+.NewsletterContainer{
+    height: 35vh;
+    background-color: #fbce01;
+    align-items: center;
+}
+.NewsletterTitle{
+    text-align: center;
+    color: rgb(26, 26, 26);
+    padding-top: 1em;
+}
+form{
+    margin-top: -1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+.NewsletterInput{
+    width: 40%;
+    padding: 1em;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-size: 1.2rem;
+}
+::placeholder{
+    color: black;
+    font-size: 1.2rem;
+}
+.NewsletterBtn{
+    background-color: #4484cf;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.8em 2em;
+    border-radius: 6px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.NewsPage{
+    height: 70vh;
+    width: 100vw;
+    background-color:rgb(245, 245, 245);
+    position: relative;
+}
+.NewsTitle, .NewsSubtitle{
+    margin-left: 18%;
+}
+.NewsTitle{
+    font-size: 2rem;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+.NewsSubtitle{
+}
+.NewsContainer{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    height: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 5em;
+}
+.NewsItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.NewsText{
+    text-align: center;
+    padding-bottom: 1em;
+    color: rgb(29, 29, 29);
+    width: 85%;
+    font-size: 1.4rem;
+}
+.NewsDate{
+    color: rgb(29, 29, 29);
+    font-weight: normal;
+    padding: 1em 0em;
+}
+.NewsImg{
+    height: 200px;
+    width: 350px;
+    cursor: pointer;
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.NewsImg1{
+    background-image: url('https://images.unsplash.com/photo-1503899036084-c55cdd92da26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+}
+.NewsImg2{
+    background-image: url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1972&q=80');
+}
+.NewsImg3{
+    background-image: url('https://images.unsplash.com/photo-1558642084-fd07fae5282e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80');
+}
+.NewsOverlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #4484cf;
+    overflow: hidden;
+    width: 350px;
+    height: 200px;
+    transition: .4s ease;
+    opacity: 0;
+}
+.GoIcon{
+    color: white;
+    margin-top: 20%;
+    font-size: 4rem;
+    margin-left: 40%;
+}
+.NewsImg:hover .NewsOverlay{
+    opacity: 1;
+}
+.NewsPageBtn{
+    position: absolute;
+    top: 10%;
+    left: 77%;
+    background-color: #fbce01;
+    color: black;
+    border: none;
+    padding: 0.8em 1.3em;
+    font-size: 1.3rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.ButtonArrowsIcon{
+    font-size: 1rem;
+    margin-left: 0.3em;
+    color: black;
+}
+.FooterContainer{
+    height: 35vh;
+    position: relative;
+    width: 100vw;
+}
+
+.FooterSectionsContainer{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5vh;
+    height: 75%;
+    width: 75%;
+    margin: auto;
+}
+.FooterSection{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: space-evenly;
+}
+.FooterSection li{
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.TopFooterItem{
+    padding-bottom: 1em;
+}
+.FooterSocialsContainer{
+    padding-top: 1em;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.SocialIcon{
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding-bottom: 1em;
+}
+.Facebook{
+    color: #3b5998;
+}
+.Twitter{
+    color: #00acee;
+}
+.Instagram{
+    color: #c13584;
+}
+.Youtube{
+    color: #c4302b;
+}
+.CreditText{
+    font-weight: normal;
+}
+i{
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+i:hover{
+    transform: scale(1.1);
+}
+@media only screen and (max-width: 1200px) {
+
+    i{
+        color: rgb(0, 102, 255);
+        font-size: 2.5rem;
+        transition: 0.3s ease;
+        cursor: pointer;
+    }
+    .InfoTitle{
+        font-weight: normal;
+        font-size: 1.6rem;
+    }
+    .InfoDescription{
+        width: 60%;
+        text-align: center;
+        font-weight: 300;
+        line-height: 1.4em;
+        position: relative;
+        font-size: 1rem;
+    }
+    .InfoSection{
+        height: fit-content;
+        padding: 2.5em 0em;
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin: auto;
+        grid-column-gap: 1em;
+    }
+    .Page1{
+        position: relative;
+        background-image: url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1972&q=80');
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        background-position: center;
+        background-attachment: local;
+        background-repeat: no-repeat;
+    }
+    .DestinationImgContainer{
+        height: 180px;
+        width: 230px;
+        background-color: lightblue;
+        position: relative;
+        cursor: pointer;
+    }
+    .Destination{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        background-size: cover;
+        background-position: center;
+    }
+    .NewsPage{
+        height: fit-content;
+        padding-bottom: 10vh;
+        width: 100vw;
+        background-color:rgb(245, 245, 245);
+        position: relative;
+    }
+    .NewsTitle, .NewsSubtitle{
+        /* text-align: center; */
+    }
+    .NewsSubtitle{
+        margin-bottom: 4em;
+    }
+    .NewsTitle{
+        font-size: 2rem;
+        padding-top: 1em;
+        padding-bottom: 0.5em;
+    }
+    .NewsPage{
+        height: fit-content;
+        padding-bottom: 10vh;
+        width: 100vw;
+        background-color:rgb(245, 245, 245);
+        position: relative;
+    }
+    .NewsContainer{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: auto;
+        height: 80%;
+        justify-content: space-evenly;
+        align-items: center;
+        row-gap: 5em;
+    }
+}
+@media only screen and (max-width: 1000px){
+    img{
+        background-attachment: initial;
+    }
+    .Page1Title{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: bold;
+        font-size: 2.7rem;
+        z-index: 5;
+    }
+    .Page1Btn{
+        background-color: transparent;
+        color: white;
+        z-index: 3;
+        font-size: 1.4rem;
+        padding: 0.5em 1.5em;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: none;
+        border: 2px solid white;
+        cursor: pointer;
+    }
+ 
+    .DestinationsPage{
+        height: fit-content;
+        padding-bottom: 10vh;
+    }
+    .DestinationsContainer{
+        width: fit-content;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 2em;
+    }
+    .DestinationImgContainer{
+        height: 20vh;
+        width: 40vw;
+        background-color: lightblue;
+        position: relative;
+        cursor: pointer;
+    }
+    .SmallImgContainer{
+        height: 25vh;
+        position: relative;
+        background-image: url('https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+        background-size: cover;
+        object-fit: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        
+    }
+    .NewsContainer{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: auto;
+        height: 80%;
+        justify-content: space-evenly;
+        align-items: center;
+        row-gap: 5em;
+    }
+    .NewsItem{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+    .NewsText{
+        text-align: center;
+        padding-bottom: 1em;
+        color: rgb(29, 29, 29);
+        width: 85%;
+        font-size: 1.4rem;
+    }
+    .NewsDate{
+        color: rgb(29, 29, 29);
+        font-weight: normal;
+        padding: 1em 0em;
+    }
+    .NewsImg{
+        height: 200px;
+        width: 350px;
+        cursor: pointer;
+        background-position: center;
+        object-fit: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .NewsOverlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #4484cf;
+        overflow: hidden;
+        width: 350px;
+        height: 200px;
+        transition: .4s ease;
+        opacity: 0;
+    }
+    .NewsPageBtn{
+        position: absolute;
+        top: 95%;
+        left: 70%;
+        background-color: #fbce01;
+        border: none;
+        padding: 0.5em 1em;
+        font-size: 1.3rem;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 768px){
+    .Page1Title{
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            width: 100%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 2.7rem;
+            z-index: 5;
+    }
+    .Page1Btn{
+        background-color: transparent;
+        color: white;
+        z-index: 3;
+        font-size: 1.4rem;
+        padding: 0.5em 1.5em;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        width: fit-content;
+        text-align: center;
+        transform: translateX(-50%);
+        border: none;
+        border: 2px solid white;
+        cursor: pointer;
+    }
+    .Page1{
+        position: relative;
+        background-image: url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1972&q=80');
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: local;
+        z-index: 6;
+    }
+    .Rightside{
+        flex-direction: column;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        z-index: 6000;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(255, 231, 94, 0.897);
+        justify-content: space-evenly;
+        align-items: center;
+        transition: 0.5s ease;
+        transform: translateY(-100%);
+    }
+    .Rightside li{
+        color: black;
+    }
+    .navactive{
+        transform: translateY(00%);
+    }
+    .toggle .b1{
+        transform: translateY(9px) rotate(138deg);
+        background-color: black;
+    }
+    .toggle .b2{
+        opacity: 0;
+        background-color: black;
+    }
+    .toggle .b3{
+        transform: translateY(-8px) rotate(-135deg);
+        background-color: black;
+    }
+    .ham{
+        opacity: 1;
+        position: fixed;
+        padding-top: 1em;
+        top: 0%;
+        left: 85%;
+        z-index: 999;
+        cursor: pointer;
+    }
+    .b1,.b2,.b3{
+        background-color: white;
+        width: 40px;
+        height: 4.8px;
+        margin: 4.2px;
+        transition: 0.5s ease-in-out;
+    }
+    .Img1Container{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: 100vw;
+        position: relative;
+        letter-spacing: 0.03em;
+    }
+    .BigImg{
+        width: 100%;
+        object-fit: cover;
+    }
+    .ImgDescriptionTitle{
+        /* position: absolute;
+        top: 30%;
+        left: 5%; */
+        margin-top: 4em;
+        margin-left: 1.2em;
+        font-weight: normal;
+        font-size: 2rem;
+        line-height: 1.5em;
+    }
+    .ImgDescriptionSubtitle{
+        margin-top: 1em;
+        margin-left: 2.5em;
+        width: 75%;
+        font-weight: 300;
+        line-height: 1.8em;
+    }
+    .Img1Description{
+        height: fit-content;
+        padding-bottom: 3em;
+        width: 100vw;
+        background-color: rgb(245, 245, 245);
+        position: relative;
+    }
+    .Img2Container{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: 100vw;
+        position: relative;
+        letter-spacing: 0.03em;
+    }
+    
+    .Img2Description{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(245, 245, 245);
+        position: relative;
+        padding-bottom: 1em;
+    }
+    .DestinationImgContainer{
+        height: 300px;
+        width: 75vw;
+        background-color: lightblue;
+        position: relative;
+        cursor: pointer;
+    }
+    .DestinationsContainer{
+        width: fit-content;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 2em;
+    }
+    .Destination{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        background-size: cover;
+        background-position: center;
+    }
+    .SmallImgMainText, .SmallImgSubtext{
+        /* top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); */
+        letter-spacing: 0.03em;
+        color: white;
+        text-align: center;
+        z-index: 4;
+    }
+    .SmallImgMainText{
+        /* top: 40%; */
+        width: 100%;
+    }
+    .SmallImgSubtext{
+        /* top: 60%;
+        width: 25%; */
+        margin-top: 1em;
+        width: 100%;
+    }
+    .NewsPageBtn{
+    left: 35%;
+    background-color: #fbce01;
+    border: none;
+    padding: 0.8em 2em;
+    font-size: 1.3rem;
+    border-radius: 6px;
+    }
+    .NewsletterInput{
+        width: 70%;
+    }
+    .FooterContainer{
+        height: fit-content;
+        position: relative;
+        padding: 2em 0em;
+        width: 100vw;
+    }
+    
+    .FooterSectionsContainer{
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3em 0em;
+        padding-top: 5vh;
+        height: 75%;
+        width: 75%;
+        margin: auto;
+    }
+    .FooterSection{
+        display: flex;
+        flex-direction: column;
+        height: 90%;
+        justify-content: space-evenly;
+    }
+    .FooterSection li{
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+    .TopFooterItem{
+        padding-bottom: 1em;
+    }
+    .FooterSocialsContainer{
+        padding-top: 1em;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
